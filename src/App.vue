@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Tarefas</h1>
-    <TaskProgress :progress="progress" />
+    <Progress :progress="progress" />
     <NewTask @taskAdded="addTask" />
     <TasksGrid
       :tasks="tasks"
@@ -14,10 +14,10 @@
 <script>
 import NewTask from "./components/NewTask.vue";
 import TasksGrid from "./components/TasksGrid.vue";
-import TaskProgress from "./components/TaskProgress.vue";
+import Progress from "./components/Progress.vue"
 
 export default {
-  components: { TaskProgress, NewTask, TasksGrid },
+  components: { Progress, NewTask, TasksGrid },
   data() {
     return {
       tasks: [
